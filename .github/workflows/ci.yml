@@ -12,7 +12,9 @@ jobs:
 
     steps:
       - name: Info
-        run: echo "github.ref ${{ github.ref }}"
+        run: |
+          echo "github.ref ${{ github.ref }}"
+          echo "github.event_name ${{ github.event_name }}"
 
       - uses: actions/setup-node@v4
         with:
